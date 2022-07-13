@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+// import ForgotPwd from "./view/ForgotPwd/ForgotPwd";
+import Login from "./view/Login/Login";
+// import PackageCard from "./view/Card/PackageCard";
+import Register from "./view/Register/Register";
+// import Profile from './view/Profile/Profile';
+// import ProfileMain from './view/Profile/ProfileMain';
+import Dashboard from './view/Dashboard/Dashboard';
+
+const App=() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Login/> 
+      <Register/>
+      {/* <ForgotPwd/> */}
+      <Dashboard userName='Craig'/>
+      {/* <PackageCard/> */}
+      {/* <ProfileMain/> */}
+
     </div>
-  );
+  )
 }
 
 export default App;
