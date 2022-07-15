@@ -14,7 +14,7 @@ import { OutlinedInput } from "@mui/material";
 
 import {Link,Outlet} from 'react-router-dom';
 
-const Dashboard = ({userName="user"}) => (
+const AdminDashboard = ({userName="user"}) => (
     <div id="wrapper">
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -72,21 +72,21 @@ const Dashboard = ({userName="user"}) => (
             <hr className="sidebar-divider d-none d-md-block"></hr>
 
             <div className="sidebar-heading">
-                TMS
+                {/* TMS */}
             </div>
 
 
             <li className="nav-item">
-                <a className="nav-link" href="charts.html">
+                <Link className="nav-link" to="/viewusers">
                     <i className="fas fa-fw fa-chart-area"></i>
-                    <span>About Us</span></a>
+                    <span>View Users</span></Link>
             </li>
 
             {/* <!-- Nav Item - Tables --> */}
             <li className="nav-item">
-                <a className="nav-link" href="tables.html">
+                <Link className="nav-link" to="/viewagencies">
                     <i className="fas fa-fw fa-table"></i>
-                    <span>Contact Us</span></a>
+                    <span>View Agencies</span></Link>
             </li>
 
 
@@ -370,4 +370,4 @@ const Dashboard = ({userName="user"}) => (
     </div>
 
 );
-export default Dashboard;
+export default AdminDashboard;
