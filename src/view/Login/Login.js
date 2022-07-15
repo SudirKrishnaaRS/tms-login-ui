@@ -5,6 +5,8 @@ import React from 'react';
 // import './sum/sumStyle.css';
 import "./Login.css";
 
+import {Link,Outlet} from 'react-router-dom';
+
 const Login =()=> {
     return(
         <div className="container">
@@ -28,11 +30,11 @@ const Login =()=> {
                                         <div className="form-group">
                                             <input type="email" className="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address..."/>
+                                                placeholder="Enter Email Address..." />
                                         </div>
                                         <div className="form-group">
                                             <input type="password" className="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password"/>
+                                                id="exampleInputPassword" placeholder="Password" />
                                         </div>
                                         <div className="form-group">
                                             <div className="custom-control custom-checkbox small">
@@ -41,9 +43,9 @@ const Login =()=> {
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" className="btn btn-primary btn-user btn-block">
+                                        <Link replace to="/" className="btn btn-primary btn-user btn-block">
                                             Login
-                                        </a>
+                                        </Link>
                                         <hr/>
                                         {/* <a href="index.html" className="btn btn-google btn-user btn-block">
                                             <i className="fab fa-google fa-fw"></i> Login with Google
@@ -54,15 +56,16 @@ const Login =()=> {
                                     </form>
                                     <hr/>
                                     <div className="text-center">
-                                        <a className="small" href="forgot-password.html">Forgot Password?</a>
+                                        <Link className="small" replace to="/forgotpassword">Forgot Password?</Link>
                                     </div>
                                     <div className="text-center">
-                                        <a className="small" href="Register.js">Create an Account!</a>
+                                        <Link className="small" replace to="/register">Create an Account!</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <Outlet/>
                 </div>
 
             </div>

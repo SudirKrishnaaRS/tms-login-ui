@@ -1,9 +1,9 @@
 import React from 'react';
 
-// import ForgotPwd from "./view/ForgotPwd/ForgotPwd";
-// import Login from "./view/Login/Login";
+import ForgotPwd from "./view/ForgotPwd/ForgotPwd";
+import Login from "./view/Login/Login";
 // import PackageCard from "./view/Card/PackageCard";
-// import Register from "./view/Register/Register";
+import Register from "./view/Register/Register";
 // import Profile from './view/Profile/Profile';
 // import ProfileMain from './view/Profile/ProfileMain';
 import Dashboard from './view/Dashboard/Dashboard';
@@ -38,22 +38,34 @@ const App=() => {
 
     <Router>
       <Routes>
-        {/* <Route path='/' element={<Dashboard userName='Craig'/>}> */}
-        <Route path='/' element={<AdminDashboard userName='admin'/>}>
-            {/* USER DASHBOARD ROUTES */}
-            {/* <Route path='/profile' element={<ProfileMain/>} />
+
+         {/* USER DASHBOARD ROUTES */}
+        {/* <Route path='/' element={<Dashboard userName='Craig'/>}> 
+            <Route path='/profile' element={<ProfileMain/>} />
             <Route path='/bookpackage' element={<PackageCard/>} />
             <Route path='/bookhotel' element={<ViewHotelBookingsMain/>} />
-            <Route path='/viewbooking' element={<ViewBookingsMain/>} /> */}
+            <Route path='/viewbooking' element={<ViewBookingsMain/>} /> 
+            <Route path='/logout' element={<Login/>} /> 
+        </Route> */}
 
-            {/* ADMIN DASHBOARD ROUTES */}
+
+        {/* ADMIN DASHBOARD ROUTES */}
+        <Route path='/' element={<AdminDashboard userName='admin'/>}>
             <Route path='/bookpackage' element={<PackageCard/>} />
             <Route path='/bookhotel' element={<ViewHotelBookingsMain/>} />
             <Route path='/viewbooking' element={<ViewBookingsMain/>} />
             <Route path='/viewusers' element={<ViewUsers/>} />
-            <Route path='/viewagencies' element={<ViewAgencies/>} />
-
+            <Route path='/viewagencies' element={<ViewAgencies/>} /> 
         </Route>
+
+       
+        {/* Common Routes for Login,Register,Forgot Passoword */}
+        <Route path='/login' element={<Login/>} />
+        <Route path='/register' element={<Register/>} />
+        <Route path='/forgotpassword' element={<ForgotPwd/>} />
+
+
+        
       </Routes>
     </Router>
 

@@ -2,6 +2,8 @@ import React from 'react';
 
 import './ForgotPwd.css';
 
+import {Link,Outlet} from 'react-router-dom';
+
 const ForgotPwd = () => {
     return(
         <div class="container">
@@ -35,10 +37,10 @@ const ForgotPwd = () => {
                                     </form>
                                     <hr/>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <Link class="small" replace to="/register">Create an Account!</Link>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="login.html">Already have an account? Login!</a>
+                                        <Link class="small" replace to="/login">Already have an account? Login!</Link>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +51,7 @@ const ForgotPwd = () => {
             </div>
 
         </div>
-
+        <Outlet/>
     </div>
     )
 }

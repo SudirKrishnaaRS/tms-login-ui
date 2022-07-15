@@ -4,6 +4,8 @@ import "./Register.css";
 // import Login from "./view/Login/Login";
 // import { Link } from 'react-router';
 
+import {Link,Outlet} from 'react-router-dom';
+
 const Register = () => {
     return(
         <div className="container">
@@ -56,17 +58,17 @@ const Register = () => {
                             </form>
                             <hr/>
                             <div className="text-center">
-                                <a className="small" href="forgot-password.html">Forgot Password?</a>
+                                <Link className="small" replace to="/forgotpassword">Forgot Password?</Link>
                             </div>
                             <div className="text-center">
-                                <a className="small" href="/#">Already have an account? Login!</a>
+                                <Link className="small" replace to="/login">Already have an account? Login!</Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <Outlet/>
     </div>
     )
 }
