@@ -1,6 +1,6 @@
 import React from 'react';
 import AgentTableRecord from './AgentTableRecord';
-import TableRecord from './TableRecord';
+// import TableRecord from './TableRecord';
 
 const ViewAgencies = () => {
     return(

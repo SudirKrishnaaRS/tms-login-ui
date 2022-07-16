@@ -2,19 +2,19 @@ import React from "react";
 import "./Dashboard.css";
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import PackageCard from "../Card/PackageCard";
+// import PackageCard from "../Card/PackageCard";
 // import ProfileMain from "../Profile/ProfileMain";
-import Profile from "../Profile/Profile";
-import UserTable from "../Admin/UserTable";
-import ViewBookings from "../Booking/ViewBookings";
-import ViewHotelBookings from "../Booking/ViewHotelBookings";
-import { OutlinedInput } from "@mui/material";
+// import Profile from "../Profile/Profile";
+// import UserTable from "../Admin/UserTable";
+// import ViewBookings from "../Booking/ViewBookings";
+// import ViewHotelBookings from "../Booking/ViewHotelBookings";
+// import { OutlinedInput } from "@mui/material";
 // import user from './undraw_profile_2.svg';
 
 
 import {Link,Outlet} from 'react-router-dom';
 
-const AdminDashboard = ({userName="user"}) => (
+const AgentDashboard = ({userName="user"}) => (
     <div id="wrapper">
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -46,12 +46,11 @@ const AdminDashboard = ({userName="user"}) => (
                 ACTIONS
             </div>
 
-            
+
 
             {/* <!-- Nav Item - Charts --> */}
             <li className="nav-item">
                 <Link className="nav-link" to="/bookpackage">
-                {/* <Link className="nav-link" to="/addpackage"> */}
                     <i className="fas fa-fw fa-chart-area"></i>
                     <span>Book Package</span></Link>
             </li>
@@ -78,16 +77,16 @@ const AdminDashboard = ({userName="user"}) => (
 
 
             <li className="nav-item">
-                <Link className="nav-link" to="/viewusers">
+                <Link className="nav-link" replace to="/addpackage">
                     <i className="fas fa-fw fa-chart-area"></i>
-                    <span>View Users</span></Link>
+                    <span>Add Package</span></Link>
             </li>
 
             {/* <!-- Nav Item - Tables --> */}
             <li className="nav-item">
                 <Link className="nav-link" to="/viewagencies">
                     <i className="fas fa-fw fa-table"></i>
-                    <span>View Agencies</span></Link>
+                    <span>View Added Packages</span></Link>
             </li>
 
 
@@ -371,4 +370,4 @@ const AdminDashboard = ({userName="user"}) => (
     </div>
 
 );
-export default AdminDashboard;
+export default AgentDashboard;

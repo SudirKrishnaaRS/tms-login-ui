@@ -10851,21 +10851,21 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("C:\Users\rsskrish\Documents\React_workspace\tms-login-ui\src\view\Login\loginPic.svg") /*url("https://source.unsplash.com/K4mSJ7kc0As/600x800")*/;
+  background: url("../Login/loginPic.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .bg-register-image {
-  background: url("C:\Users\rsskrish\Documents\React_workspace\tms-login-ui\src\view\Register\registerPic.svg");
+  background: url("../Register/registerPic.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .bg-password-image {
-  background: url("C:\Users\rsskrish\Documents\React_workspace\tms-login-ui\src\view\ForgotPwd\forgotPic.svg");
+  background: url("../ForgotPwd/forgotPic.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
