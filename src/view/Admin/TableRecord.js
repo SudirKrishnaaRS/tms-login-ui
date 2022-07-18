@@ -4,39 +4,44 @@ import "./UserTable.css";
 
 
 
-const TableRecord=({userId="***",firstName="*******",lastName="*******",userName="*******"})=>(
+const TableRecord=({userId="***",firstName="*******",lastName="*******",userName="*******",role="*****",agencyName="NA",agencyEarning="NA"})=>(
 
-        <tbody>
+    <tbody>
 
-                                <tr>
+                            <tr>
 
-                                    <td>{userId}</td>
+                                <td>{userId}</td>
 
-                                    <td>{firstName}</td>
+                                <td>{firstName}</td>
 
-                                    <td>{lastName}</td>
+                                <td>{lastName}</td>
 
-                                    <td>{userName}</td>
+                                <td>{userName}</td>
 
-                                    {/* <td>{password}</td> */}
+                                <td>{role}</td>
 
-                                    <td>
+                                <td>{agencyName}</td>
+                                
+                                <td>{agencyEarning}</td>
 
-                                        <ul className="action-list">
+                                <td>
 
-                                            <li><a href="/#" data-tip="view"><i className="fa fa-eye"></i></a></li>
+                                    <ul className="action-list">
 
-                                            <li><a href="/#" data-tip="delete"><i className="fa fa-trash"></i></a></li>
+                                        <li><a href="/#" data-tip="view"><i className="fa fa-eye"></i></a></li>
 
-                                        </ul>
+                                        <li><a href="/#" data-tip="delete"><i className="fa fa-trash"></i></a></li>
 
-                                    </td>
+                                    </ul>
 
-                                </tr>
+                                </td>
 
-            </tbody>
+                            </tr>
+
+        </tbody>
 
 )
+
 
 
 

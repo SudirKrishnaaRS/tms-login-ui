@@ -26,6 +26,7 @@ import ViewUsers from './view/Admin/ViewUsers';
 import ViewAgencies from './view/Admin/ViewAgencies';
 import AddPackage from './view/Agent/AddPackage';
 import AgentDashboard from './view/Dashboard/AgentDashboard';
+import ViewAgenciesController from './view/Controllers/AdminController/ViewAgenciesController';
 
 const App=() => {
   return (
@@ -52,23 +53,23 @@ const App=() => {
 
 
         {/* ADMIN DASHBOARD ROUTES */}
-        {/* <Route path='/' element={<AdminDashboard userName='admin'/>}>
+        <Route path='/' element={<AdminDashboard userName='admin'/>}>
             <Route path='/bookpackage' element={<PackageCard/>} />
             <Route path='/addpackage' element={<AddPackage/>} />
             <Route path='/bookhotel' element={<ViewHotelBookingsMain/>} />
             <Route path='/viewbooking' element={<ViewBookingsMain/>} />
             <Route path='/viewusers' element={<ViewUsers/>} />
-            <Route path='/viewagencies' element={<ViewAgencies/>} /> 
-        </Route> */}
+            <Route path='/viewagencies' element={<ViewAgenciesController/>} /> 
+        </Route>
 
 
         {/* AGENT DASHBOARD */}
-        <Route path='/' element={<AgentDashboard userName='agent'/>}>
+        {/* <Route path='/' element={<AgentDashboard userName='agent'/>}>
             <Route path='/bookpackage' element={<PackageCard/>} />
             <Route path='/bookhotel' element={<ViewHotelBookingsMain/>} />
             <Route path='/viewbooking' element={<ViewBookingsMain/>} />
             <Route path='/addpackage' element={<AddPackage/>} />
-        </Route>
+        </Route> */}
        
        
         {/* Common Routes for Login,Register,Forgot Passoword */}

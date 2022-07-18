@@ -1,7 +1,7 @@
 import React from 'react';
 import "./UserTable.css"
 import TableRecord from "./TableRecord";
-const ViewUsers=() => {
+const ViewUsers=({detail}) => {
     return(
         <div className="container">
         <div className="row">
@@ -26,19 +26,27 @@ const ViewUsers=() => {
                         <table className="table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>User ID</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Username</th>
-                                    {/* <th>Password</th> */}
+                                    <th>Role</th>
+                                    <th>Agency Name</th>
+                                    <th>Agency Total Earning</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <TableRecord userId="1" firstName="user1" lastName="lname1" userName="user1@gmail.com"/>
-                            <TableRecord userId="2" firstName="user2" lastName="lname2" userName="user2@gmail.com"/>
+                            {detail.map((detail,i) =>
+
+                            <TableRecord userId={detail.userId} firstName={detail.userFirstName} lastName={detail.userLastName} userName={detail.userName} role={detail.role[0]?.roleId} agencyName={detail.agency?.name} agencyEarning={detail.agency?.totalEarnings}/>
+
+                            )}
+
+                            {/* <TableRecord userId={detail.userId} firstName={detail.userFirstName} lastName={detail.userLastName} userName={detail.userName} role={detail.role[0]?.roleId} agencyName={detail.agency?.name} agencyEarning={detail.agency?.totalEarnings}/> */}
+                            {/* <TableRecord userId="2" firstName="user2" lastName="lname2" userName="user2@gmail.com"/>
                             <TableRecord userId="3" firstName="user3" lastName="lname3" userName="user3@gmail.com"/>
                             <TableRecord userId="4" firstName="user4" lastName="lname4" userName="user4@gmail.com"/>
-                            
+                             */}
                                 </table>
                                 </div>
                                 </div>
@@ -47,5 +55,4 @@ const ViewUsers=() => {
         </div>
     )
 }
-
 export default ViewUsers;
