@@ -10,7 +10,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 // import ViewHotelBookings from "../Booking/ViewHotelBookings";
 // import { OutlinedInput } from "@mui/material";
 // import user from './undraw_profile_2.svg';
-
+import { SiYourtraveldottv } from "react-icons/si";
 
 import {Link,Outlet} from 'react-router-dom';
 
@@ -21,7 +21,7 @@ const AgentDashboard = ({userName="user"}) => (
             {/* <!-- Sidebar - Brand --> */}
             <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div className="sidebar-brand-icon rotate-n-15">
-                    <i className="fas fa-laugh-wink"></i>
+                <i className=""><SiYourtraveldottv></SiYourtraveldottv></i>
                 </div>
                 <div className="sidebar-brand-text mx-3">BooK My TriP </div>
             </a>
