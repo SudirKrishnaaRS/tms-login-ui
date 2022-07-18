@@ -26,7 +26,7 @@ import ViewUsers from './view/Admin/ViewUsers';
 import ViewAgencies from './view/Admin/ViewAgencies';
 import AddPackage from './view/Agent/AddPackage';
 import AgentDashboard from './view/Dashboard/AgentDashboard';
-import ViewAgenciesController from './view/Controllers/AdminController/ViewAgenciesController';
+import ViewAgenciesController from './controller/AdminController/ViewAgenciesController';
 
 const App=() => {
   return (
